@@ -4,14 +4,14 @@
     {
         static void Main(string[] args)
         {
-            //foreach (var item in args)
-            //{
-            //    if (item == "-h")
-            //    {
-            //        Console.WriteLine("Yarım çağır");
-            //    }
-            //    Console.WriteLine(item);
-            //}
+            foreach (var item in args)
+            {
+                //if (item == "-h")
+                //{
+                //    Console.WriteLine("Yarım çağır");
+                //}
+                Console.WriteLine(item);
+            }
 
             //decimal sayi1 = 26, sayi2 = 32;
             //decimal sayi1 = 32, sayi2 = 26;
@@ -134,7 +134,115 @@
 
             //AHmet mandıralı
             //ahmet.mandirali
+
+            //EmaileUydurma("Aümeş mandıralı");
+            ////EmaileUydurma("Fatımş üşÖÇÇÇ");
+            //EmaileUydurma("Fatımş üşÖÇÇÇ", new string[] {"i", "ö"});
+            //EmaileUydurma(3);
+
+            //string yazi = "asdasdasd";
+            //int sonuc = SonucUret(out yazi);
+
+            //int sonuc = 0;
+            //bool cevirilebilirMi = int.TryParse("12314", out sonuc);
+            //int sayi = int.Parse("asdasdasdas");
+
+            //int degisken = 3;
+            //SonucUret(ref degisken);
+
+            //Console.WriteLine(degisken);
+
+            //SonucUret(new string[] { "a", "1", "dsf", "dvgsx" });
+            //SonucUret("a", "1", "dsf", "dvgsx", "asdas", "dsfsdgfg", "dfhgdf");
         }
+
+        //static void SonucUret(string[] parametreler)
+        //{
+        //    foreach (var item in parametreler)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+        //}
+
+        static void SonucUret(params string[] parametreler)
+        {
+            foreach (var item in parametreler)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        static void SonucUret(int param)
+        {
+            param = 123;
+        }
+
+        static void SonucUret(ref int param)
+        {
+            param = 123;
+        }
+
+        static int SonucUret(out string yazi)
+        {
+            int sonuc = 0;
+            yazi = "asdasdasd";
+
+            return sonuc;
+        }
+
+        static string EmaileUydurma(string uydurulacakString)
+        {
+            string email = uydurulacakString;
+
+            email = email.ToLower();
+
+            //foreach (var item in email)
+            //{
+            //    if (item == ' ')
+            //        item = '.';
+            //}
+
+            //foreach (var item in email)
+            //{
+            //    if (item == 'ş')
+            //        item = 's';
+            //}
+
+            //foreach (var item in email)
+            //{
+            //    if (item == 'ö')
+            //        item = 'o';
+            //}
+
+            //foreach (var item in email)
+            //{
+            //    if (item == ' ')
+            //        item = '.';
+            //}
+
+            email = email.Replace(" ", ".");
+            email = email.Replace("ş", "s");
+            email = email.Replace("ı", "i");
+            email = email.Replace("ü", "u");
+            //deger = deger.Replace("ö", "o");
+
+            return email;
+        }
+
+        static string EmaileUydurma(int param)
+        {
+            return "";
+        }
+
+        static string EmaileUydurma(string deger, string[] izinVerilenKarakterler)
+        {
+            return "";
+        }
+
+        //static int EmaileUydurma(string deger, string[] izinVerilenKarakterler)
+        //{
+        //    return 0;
+        //}
 
         static void XGunSonrasi(int gun)
         {
